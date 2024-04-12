@@ -1,0 +1,14 @@
+az vm create \
+  --resource-group learn-7b6f9d7b-2e9a-4f2b-a948-a26923d5f735 \
+  --location westus \
+  --name SampleVM \
+  --image Ubuntu2204 \
+  --admin-username azureuser \
+  --generate-ssh-keys \
+  --verbose 
+
+// resize a vm
+az vm list-vm-resize-options --resource-group learn-7b6f9d7b-2e9a-4f2b-a948-a26923d5f735 --name SampleVM --output table
+
+//install NGNIX
+sudo apt-get -y update && sudo apt-get -y install nginx
