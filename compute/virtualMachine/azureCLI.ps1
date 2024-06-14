@@ -1,3 +1,5 @@
+#Connect-AzAccount
+
 New-AzResourceGroup -Name 'myResourceGroup' -Location 'EastUS'
 
 New-AzVm `
