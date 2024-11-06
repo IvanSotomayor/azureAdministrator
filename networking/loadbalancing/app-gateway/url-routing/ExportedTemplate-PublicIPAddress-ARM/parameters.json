@@ -1,0 +1,94 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "publicIpAddressName": {
+            "value": {
+                "type": "String",
+                "value": "video-publicip"
+            }
+        },
+        "location": {
+            "value": {
+                "type": "String",
+                "value": "mexicocentral"
+            }
+        },
+        "extendedLocation": {
+            "value": {
+                "type": "Object",
+                "value": {}
+            }
+        },
+        "sku": {
+            "value": {
+                "type": "String",
+                "value": "Standard"
+            }
+        },
+        "domainNameLabel": {
+            "value": {
+                "type": "String",
+                "value": ""
+            }
+        },
+        "domainNameLabelScope": {
+            "value": {
+                "type": "String",
+                "value": ""
+            }
+        },
+        "routingPreference": {
+            "value": {
+                "type": "String",
+                "value": ""
+            }
+        },
+        "publicIPAllocationMethod": {
+            "value": {
+                "type": "String",
+                "value": "Static"
+            }
+        },
+        "publicIpAddressVersion": {
+            "value": {
+                "type": "String",
+                "value": "IPv4"
+            }
+        },
+        "idleTimeoutInMinutes": {
+            "value": {
+                "type": "Int",
+                "value": 4
+            }
+        },
+        "tier": {
+            "value": {
+                "type": "String",
+                "value": "Regional"
+            }
+        },
+        "zones": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "2",
+                    "1",
+                    "3"
+                ]
+            }
+        },
+        "ddosProtectionMode": {
+            "value": {
+                "type": "String",
+                "value": "VirtualNetworkInherited"
+            }
+        },
+        "tagsByResource": {
+            "value": {
+                "type": "Object",
+                "value": {}
+            }
+        }
+    }
+}

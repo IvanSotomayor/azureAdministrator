@@ -1,0 +1,96 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": {
+                "type": "String",
+                "value": "mexicocentral"
+            }
+        },
+        "applicationGatewayName": {
+            "value": {
+                "type": "String",
+                "value": "appgateway-image-video"
+            }
+        },
+        "tier": {
+            "value": {
+                "type": "String",
+                "value": "Standard_v2"
+            }
+        },
+        "skuSize": {
+            "value": {
+                "type": "String",
+                "value": "Standard_v2"
+            }
+        },
+        "capacity": {
+            "value": {
+                "type": "Int",
+                "value": 1
+            }
+        },
+        "subnetName": {
+            "value": {
+                "type": "String",
+                "value": "applicationgatewaysubnet"
+            }
+        },
+        "zones": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "1"
+                ]
+            }
+        },
+        "publicIpZones": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "1"
+                ]
+            }
+        },
+        "publicIpAddressName": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "appgateway-public-ip"
+                ]
+            }
+        },
+        "sku": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "Standard"
+                ]
+            }
+        },
+        "allocationMethod": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "Static"
+                ]
+            }
+        },
+        "ipAddressVersion": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "IPv4"
+                ]
+            }
+        },
+        "privateIpAddress": {
+            "value": {
+                "type": "Array",
+                "value": []
+            }
+        }
+    }
+}

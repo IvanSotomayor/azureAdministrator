@@ -1,0 +1,189 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": {
+                "type": "String",
+                "value": "mexicocentral"
+            }
+        },
+        "networkInterfaceName": {
+            "value": {
+                "type": "String",
+                "value": "images-webserver699"
+            }
+        },
+        "networkSecurityGroupName": {
+            "value": {
+                "type": "String",
+                "value": "images-webserver-nsg"
+            }
+        },
+        "networkSecurityGroupRules": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    {
+                        "name": "SSH",
+                        "properties": {
+                            "priority": 300,
+                            "protocol": "TCP",
+                            "access": "Allow",
+                            "direction": "Inbound",
+                            "sourceAddressPrefix": "*",
+                            "sourcePortRange": "*",
+                            "destinationAddressPrefix": "*",
+                            "destinationPortRange": "22"
+                        }
+                    },
+                    {
+                        "name": "HTTP",
+                        "properties": {
+                            "priority": 320,
+                            "protocol": "TCP",
+                            "access": "Allow",
+                            "direction": "Inbound",
+                            "sourceAddressPrefix": "*",
+                            "sourcePortRange": "*",
+                            "destinationAddressPrefix": "*",
+                            "destinationPortRange": "80"
+                        }
+                    }
+                ]
+            }
+        },
+        "subnetName": {
+            "value": {
+                "type": "String",
+                "value": "default"
+            }
+        },
+        "virtualNetworkName": {
+            "value": {
+                "type": "String",
+                "value": "vnet-general"
+            }
+        },
+        "addressPrefixes": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    "10.1.0.0/16"
+                ]
+            }
+        },
+        "subnets": {
+            "value": {
+                "type": "Array",
+                "value": [
+                    {
+                        "name": "default",
+                        "properties": {
+                            "addressPrefix": "10.1.0.0/24"
+                        }
+                    }
+                ]
+            }
+        },
+        "publicIpAddressName": {
+            "value": {
+                "type": "String",
+                "value": "images-webserver-ip"
+            }
+        },
+        "publicIpAddressType": {
+            "value": {
+                "type": "String",
+                "value": "Static"
+            }
+        },
+        "publicIpAddressSku": {
+            "value": {
+                "type": "String",
+                "value": "Standard"
+            }
+        },
+        "pipDeleteOption": {
+            "value": {
+                "type": "String",
+                "value": "Detach"
+            }
+        },
+        "virtualMachineName": {
+            "value": {
+                "type": "String",
+                "value": "images-webserver"
+            }
+        },
+        "virtualMachineComputerName": {
+            "value": {
+                "type": "String",
+                "value": "images-webserver"
+            }
+        },
+        "virtualMachineRG": {
+            "value": {
+                "type": "String",
+                "value": "loadbalancer-ivan-rg"
+            }
+        },
+        "osDiskType": {
+            "value": {
+                "type": "String",
+                "value": "Premium_LRS"
+            }
+        },
+        "osDiskDeleteOption": {
+            "value": {
+                "type": "String",
+                "value": "Delete"
+            }
+        },
+        "virtualMachineSize": {
+            "value": {
+                "type": "String",
+                "value": "Standard_B1s"
+            }
+        },
+        "nicDeleteOption": {
+            "value": {
+                "type": "String",
+                "value": "Detach"
+            }
+        },
+        "hibernationEnabled": {
+            "value": {
+                "type": "Bool",
+                "value": false
+            }
+        },
+        "adminUsername": {
+            "value": {
+                "type": "String",
+                "value": "azureuser77"
+            }
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "securityType": {
+            "value": {
+                "type": "String",
+                "value": "TrustedLaunch"
+            }
+        },
+        "secureBoot": {
+            "value": {
+                "type": "Bool",
+                "value": true
+            }
+        },
+        "vTPM": {
+            "value": {
+                "type": "Bool",
+                "value": true
+            }
+        }
+    }
+}

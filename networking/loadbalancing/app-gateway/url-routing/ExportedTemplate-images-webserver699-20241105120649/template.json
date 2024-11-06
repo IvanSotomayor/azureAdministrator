@@ -1,0 +1,82 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "2018-10-01",
+            "name": "images-webserver699",
+            "location": "mexicocentral",
+            "dependsOn": [],
+            "properties": {
+                "provisioningState": "Succeeded",
+                "resourceGuid": "cecfe9f5-d96b-452e-9461-3179b42efcc6",
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "id": "/subscriptions/6c229d43-e27b-4e48-812e-c32d15c69977/resourceGroups/loadbalancer-ivan-rg/providers/Microsoft.Network/networkInterfaces/images-webserver699/ipConfigurations/ipconfig1",
+                        "etag": "W/\"11debb1f-a45f-4277-bdd8-5737eca2c01d\"",
+                        "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                        "properties": {
+                            "provisioningState": "Succeeded",
+                            "privateIPAddress": "10.1.0.4",
+                            "privateIPAllocationMethod": "Dynamic",
+                            "publicIPAddress": {
+                                "name": "images-webserver-ip",
+                                "id": "/subscriptions/6c229d43-e27b-4e48-812e-c32d15c69977/resourceGroups/loadbalancer-ivan-rg/providers/Microsoft.Network/publicIPAddresses/images-webserver-ip",
+                                "etag": "W/\"c585b2f7-8975-44a3-98c6-c167c5b76aa8\"",
+                                "location": "mexicocentral",
+                                "properties": {
+                                    "provisioningState": "Succeeded",
+                                    "resourceGuid": "94c9076e-2cad-49f9-b20e-ac5e3e4f77e3",
+                                    "ipAddress": "158.23.89.6",
+                                    "publicIPAddressVersion": "IPv4",
+                                    "publicIPAllocationMethod": "Static",
+                                    "idleTimeoutInMinutes": 4,
+                                    "ipTags": [],
+                                    "ipConfiguration": {
+                                        "id": "/subscriptions/6c229d43-e27b-4e48-812e-c32d15c69977/resourceGroups/loadbalancer-ivan-rg/providers/Microsoft.Network/networkInterfaces/images-webserver699/ipConfigurations/ipconfig1"
+                                    }
+                                },
+                                "type": "Microsoft.Network/publicIPAddresses",
+                                "sku": {
+                                    "name": "Standard"
+                                }
+                            },
+                            "subnet": {
+                                "id": "/subscriptions/6c229d43-e27b-4e48-812e-c32d15c69977/resourceGroups/loadbalancer-ivan-rg/providers/Microsoft.Network/virtualNetworks/vnet-general/subnets/default"
+                            },
+                            "primary": true,
+                            "privateIPAddressVersion": "IPv4",
+                            "applicationGatewayBackendAddressPools": [
+                                {
+                                    "id": "/subscriptions/6c229d43-e27b-4e48-812e-c32d15c69977/resourceGroups/loadbalancer-ivan-rg/providers/Microsoft.Network/applicationGateways/appgateway-image-video/backendAddressPools/images-backendpool"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "dnsSettings": {
+                    "dnsServers": [],
+                    "appliedDnsServers": [],
+                    "internalDomainNameSuffix": "ejhgoahpgwfuniqgqqstpwrgua.qrox.internal.cloudapp.net"
+                },
+                "macAddress": "7C-1E-52-30-35-8A",
+                "enableAcceleratedNetworking": false,
+                "enableIPForwarding": false,
+                "networkSecurityGroup": {
+                    "id": "/subscriptions/6c229d43-e27b-4e48-812e-c32d15c69977/resourceGroups/loadbalancer-ivan-rg/providers/Microsoft.Network/networkSecurityGroups/images-webserver-nsg"
+                },
+                "primary": true,
+                "virtualMachine": {
+                    "id": "/subscriptions/6c229d43-e27b-4e48-812e-c32d15c69977/resourceGroups/loadbalancer-ivan-rg/providers/Microsoft.Compute/virtualMachines/images-webserver"
+                },
+                "hostedWorkloads": [],
+                "tapConfigurations": []
+            },
+            "id": "/subscriptions/6c229d43-e27b-4e48-812e-c32d15c69977/resourceGroups/loadbalancer-ivan-rg/providers/Microsoft.Network/networkInterfaces/images-webserver699"
+        }
+    ]
+}
